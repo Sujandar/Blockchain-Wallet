@@ -123,8 +123,8 @@ def get_people():
 # Streamlit Code
 
 # Streamlit application headings
-st.markdown("# Fintech Finder!")
-st.markdown("## Hire A Fintech Professional!")
+st.markdown("# Krypto Jobs")
+st.markdown("## Hire A Krypto Professional!")
 st.text(" \n")
 
 ################################################################################
