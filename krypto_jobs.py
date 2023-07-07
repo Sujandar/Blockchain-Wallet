@@ -11,9 +11,9 @@
 # address.
 
 # * Calculate the total value of an Ethereum transaction, including the gas
-# estimate, that pays a Fintech Finder candidate for their work.
+# estimate, that pays a KryptoJobs2Go for their work.
 
-# * Digitally sign a transaction that pays a Fintech Finder candidate, and send
+# * Digitally sign a transaction that pays a KryptoJobs2Go, and send
 # this transaction to the Ganache blockchain.
 
 # * Review the transaction hash code associated with the validated blockchain transaction.
@@ -36,10 +36,10 @@ w3 = Web3(Web3.HTTPProvider('HTTP://127.0.0.1:7545'))
 
 ################################################################################
 # Step 1:
-# Import Ethereum Transaction Functions into the Fintech Finder Application
+# Import Ethereum Transaction Functions into the KryptoJobs2Go Application
 
 # In this section, you'll import several functions from the `crypto_wallet.py`
-# script into the file `fintech_finder.py`, which contains code for Fintech
+# script into the file `KryptoJobs2Go`, which contains code for Fintech
 # Finder’s customer interface, in order to add wallet operations to the
 # application. For this section, you will assume the perspective of a Fintech
 # Finder customer (i.e., you’ll provide your Ethereum wallet and account
@@ -64,10 +64,10 @@ w3 = Web3(Web3.HTTPProvider('HTTP://127.0.0.1:7545'))
 
 # 4. Within the Streamlit sidebar section of code, create a variable named
 # `account`. Set this variable equal to a call on the `generate_account`
-# function. This function will create the Fintech Finder customer’s (in this
+# function. This function will create the KryptoJobs2Go customer’s (in this
 # case, your) HD wallet and Ethereum account.
 
-# 5. Within this same section of the `fintech_finder.py` file, define a
+# 5. Within this same section of the `KryptoJobs2Go` file, define a
 # new `st.sidebar.write` function that will display the balance of the
 # customer’s account. Inside this function, call the `get_balance` function
 # and pass it your Ethereum `account.address`.
@@ -92,9 +92,9 @@ from crypto_wallet import generate_account, get_balance, send_transaction
 
 
 ################################################################################
-# Fintech Finder Candidate Information
+# KryptoJobs2Go Information
 
-# Database of Fintech Finder candidates including their name, digital address, rating and hourly cost per Ether.
+# Database of KryptoJobs2Go candidates including their name, digital address, rating and hourly cost per Ether.
 # A single Ether is currently valued at $1,500
 candidate_database = {
     "Lane": ["Lane", "0x50AA592E8Ed5A717C7dcE68316d8E4832521c2Aa", "4.3", .20, "Images/lane.jpeg"],
@@ -103,12 +103,12 @@ candidate_database = {
     "Kendall": ["Kendall", "0x8fD00f170FDf3772C5ebdCD90bF257316c69BA45", "4.1", .16, "Images/kendall.jpeg"]
 }
 
-# A list of the FinTech Finder candidates first names
+# A list of the KryptoJobs2Go candidates first names
 people = ["Lane", "Ash", "Jo", "Kendall"]
 
 
 def get_people():
-    """Display the database of Fintech Finders candidate information."""
+    """Display the database of KryptoJobs2Go candidate information."""
     db_list = list(candidate_database.values())
 
     for number in range(len(people)):
@@ -173,19 +173,19 @@ st.sidebar.markdown("## Candidate Name, Hourly Rate, and Ethereum Address")
 # Identify the FinTech Hire candidate
 candidate = candidate_database[person][0]
 
-# Write the Fintech Finder candidate's name to the sidebar
+# Write the KryptoJobs2Go candidate's name to the sidebar
 st.sidebar.write(candidate)
 
-# Identify the FinTech Finder candidate's hourly rate
+# Identify the KryptoJobs2Go candidate's hourly rate
 hourly_rate = candidate_database[person][3]
 
-# Write the inTech Finder candidate's hourly rate to the sidebar
+# Write the KryptoJobs2Go candidate's hourly rate to the sidebar
 st.sidebar.write(hourly_rate)
 
-# Identify the FinTech Finder candidate's Ethereum Address
+# Identify the KryptoJobs2Go candidate's Ethereum Address
 candidate_address = candidate_database[person][1]
 
-# Write the inTech Finder candidate's Ethereum Address to the sidebar
+# Write the KryptoJobs2Go Ethereum Address to the sidebar
 st.sidebar.write(candidate_address)
 
 
@@ -196,7 +196,7 @@ st.sidebar.markdown("## Total Wage in Ether")
 
 # Complete the following steps:
 
-# 1. Fintech Finder customers will select a fintech professional from the
+# 1. KryptoJobs2Go customers will select a fintech professional from the
 # application interface’s drop-down menu, and then input the amount of time for
 # which they’ll hire the worker. Code the application so that once a customer
 # completes these steps, the application will calculate the amount that the
